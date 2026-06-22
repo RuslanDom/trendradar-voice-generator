@@ -1,0 +1,24 @@
+[project]
+name = "Trend Voice"
+package_name = "com.trendradarai.trendvoice"
+version = "1.0.0"
+build_number = 1
+
+[assets]
+icon = "assets/icon.png"
+
+# Разрешения
+[android.permissions]
+read_external_storage = true
+write_external_storage = true
+internet = true
+
+# Добавляем FileProvider в манифест
+[[android.manifest.application.providers]]
+authorities = "${applicationId}.fileprovider"
+name = "androidx.core.content.FileProvider"
+exported = false
+grant_uri_permissions = true
+[[android.manifest.application.providers.meta_data]]
+name = "android.support.FILE_PROVIDER_PATHS"
+resource = "@xml/file_paths"
