@@ -1,0 +1,12 @@
+[project]
+name = "trendradar-voice-generator"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "edge-tts>=7.2.8",
+    "flet>=0.85.3",
+    "certifi",
+    "aiohttp",
+]
